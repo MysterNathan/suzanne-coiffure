@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://suzanne-coiffure.fr/sitemap.xml
+Sitemap: https://suzanne-coiffure.com/sitemap.xml
