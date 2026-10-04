@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO de base -->
+  <title>Suzanne Coiffure - Coiffeuse à domicile à Vannes et alentours</title>
+  <meta name="description" content="Suzanne, coiffeuse à domicile à Vannes et ses alentours. Coupes femme, homme, enfant et colorations à prix accessibles. Appelez le 06 XX XX XX XX.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://suzanne-coiffure.fr/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Suzanne Coiffure - Coiffeuse à domicile à Vannes">
+  <meta property="og:description" content="Coupes femme, homme, enfant et colorations à domicile, Vannes et alentours.">
+  <meta property="og:image" content="https://suzanne-coiffure.fr/assets/suzanne-photo.jpg">
+  <meta property="og:url" content="https://suzanne-coiffure.fr/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card (au cas où un lien est partagé sur X) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Suzanne Coiffure - Coiffeuse à domicile à Vannes">
+  <meta name="twitter:description" content="Coupes et colorations à domicile, Vannes et alentours.">
+  <meta name="twitter:image" content="https://suzanne-coiffure.fr/assets/suzanne-photo.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Préconnexion fonts (perf) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Données structurées Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Suzanne Coiffure",
+    "image": "https://suzanne-coiffure.fr/assets/suzanne-photo.jpg",
+    "telephone": "+33658587285",
+    "email": "suzanne.coiffure@email.fr",
+    "areaServed": {
+      "@type": "City",
+      "name": "Vannes"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Vannes",
+      "addressRegion": "Bretagne",
+      "addressCountry": "FR"
+    },
+    "priceRange": "€€",
+    "url": "https://suzanne-coiffure.fr/",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Prestations de coiffure",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Coupe femme" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Coupe homme" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Coupe enfant" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Coloration" }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <title>Suzanne Coiffure</title>
+<style>
+  :root {
+    --cream: #FAF4EC;
+    --terracotta: #C97B5F;
+    --terracotta-dark: #B2654A;
+    --brown: #4A3429;
+    --beige-rose: #E8D5C4;
+    --white: #FFFFFF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--cream);
+    color: var(--brown);
+    line-height: 1.6;
+    padding-bottom: 80px; /* espace pour le bouton sticky mobile */
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== HEADER / HERO ===== */
+  .hero {
+    background: linear-gradient(180deg, var(--beige-rose) 0%, var(--cream) 100%);
+    padding: 48px 0 64px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .logo-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--terracotta-dark);
+    letter-spacing: 0.5px;
+  }
+
+  .photo-wrapper {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 6px solid var(--white);
+    box-shadow: 0 8px 24px rgba(74, 52, 41, 0.15);
+    position: relative;
+  }
+
+  .photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .photo-placeholder {
+    color: var(--white);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+    color: var(--brown);
+    max-width: 600px;
+  }
+
+  .hero .tagline {
+    font-size: 1.15rem;
+    color: #6B5444;
+    max-width: 480px;
+  }
+
+  .btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--terracotta);
+    color: var(--white);
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(201, 123, 95, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 8px;
+  }
+
+  .btn-call:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 123, 95, 0.45);
+  }
+
+  .btn-call .icon {
+    font-size: 1.3rem;
+  }
+
+  /* ===== SECTION A PROPOS ===== */
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--terracotta-dark);
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: #8A7363;
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .about-text p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .skill-badge {
+    background-color: var(--beige-rose);
+    color: var(--brown);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  /* ===== SECTION TARIFS ===== */
+  .tarifs-section {
+    background-color: var(--beige-rose);
+  }
+
+  .tarifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .tarif-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 12px rgba(74, 52, 41, 0.08);
+  }
+
+  .tarif-card h3 {
+    color: var(--terracotta-dark);
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .tarif-card h3 .emoji {
+    font-size: 1.4rem;
+  }
+
+  .tarif-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #E0D3C5;
+    font-size: 1rem;
+  }
+
+  .tarif-row:last-child {
+    border-bottom: none;
+  }
+
+  .tarif-row .prix {
+    font-weight: 700;
+    color: var(--brown);
+  }
+
+  .tarif-note {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 0.95rem;
+    color: #6B5444;
+    font-style: italic;
+  }
+
+  /* ===== SECTION ZONE ===== */
+  .zone-section {
+    text-align: center;
+  }
+
+  .zone-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(74, 52, 41, 0.08);
+  }
+
+  .zone-box .icon-big {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .zone-box h3 {
+    font-size: 1.4rem;
+    color: var(--terracotta-dark);
+    margin-bottom: 12px;
+  }
+
+  .zone-box p {
+    color: var(--brown);
+    font-size: 1.02rem;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background-color: var(--brown);
+    color: var(--cream);
+    padding: 48px 0 32px;
+    text-align: center;
+  }
+
+  footer h2 {
+    color: var(--white);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer-phone {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--beige-rose);
+  }
+
+  .footer-email {
+    font-size: 0.95rem;
+    color: #D9C8BB;
+  }
+
+  .footer-btn {
+    background-color: var(--terracotta);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  /* ===== STICKY MOBILE CALL BUTTON ===== */
+  .sticky-call {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--terracotta);
+    padding: 16px;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  }
+
+  .sticky-call a {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .sticky-call {
+      display: block;
+    }
+
+    body {
+      padding-bottom: 72px;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+
+    .photo-wrapper {
+      width: 180px;
+      height: 180px;
+    }
+
+    .section {
+      padding: 48px 0;
+    }
+
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-content">
+      <div class="logo-name">Suzanne Coiffure</div>
+
+      <div class="photo-wrapper">
+        <!-- Remplacer par : <img src="suzanne.jpg" alt="Suzanne, coiffeuse"> -->
+        <div class="photo-placeholder">Photo de<br>Suzanne<br>(détourée)</div>
+      </div>
+
+      <h1>Votre coiffeuse à domicile, proche de chez vous</h1>
+      <p class="tagline">Coupes femme, homme, enfant et colorations, dans le confort de votre maison, à Vannes et ses alentours.</p>
+
+      <a href="tel:+33658587285" class="btn-call">
+        <span class="icon">📞</span> Appeler Suzanne
+      </a>
+    </div>
+  </header>
+
+  <!-- A PROPOS -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">À propos de Suzanne</h2>
+      <p class="section-subtitle">Une coiffeuse passionnée, à votre écoute</p>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Coiffeuse depuis de nombreuses années, je me déplace directement chez vous pour vous offrir
+            une prestation soignée, dans une ambiance simple et chaleureuse. Que ce soit pour une coupe
+            rapide, un rafraîchissement ou une couleur, je m'adapte à vos envies et à votre rythme.
+          </p>
+          <p>
+            Mon objectif : vous offrir un service de qualité, accessible, sans contrainte de déplacement
+            ni d'horaires de salon. Petits et grands sont les bienvenus !
+          </p>
+
+          <div class="skills-list">
+            <span class="skill-badge">✂️ Coupe Femme</span>
+            <span class="skill-badge">✂️ Coupe Homme</span>
+            <span class="skill-badge">✂️ Coupe Enfant</span>
+            <span class="skill-badge">🎨 Coloration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFS -->
+  <section class="section tarifs-section">
+    <div class="container">
+      <h2 class="section-title">Mes tarifs</h2>
+      <p class="section-subtitle">Des prestations de qualité à prix justes</p>
+
+      <div class="tarifs-grid">
+        <div class="tarif-card">
+          <h3><span class="emoji">👩</span> Coupe Femme</h3>
+          <div class="tarif-row"><span>Coupe simple</span><span class="prix">18 €</span></div>
+          <div class="tarif-row"><span>Coupe + brushing</span><span class="prix">25 €</span></div>
+          <div class="tarif-row"><span>Shampoing + coupe + brushing</span><span class="prix">30 €</span></div>
+        </div>
+
+        <div class="tarif-card">
+          <h3><span class="emoji">👨</span> Coupe Homme</h3>
+          <div class="tarif-row"><span>Coupe classique</span><span class="prix">14 €</span></div>
+          <div class="tarif-row"><span>Coupe + barbe</span><span class="prix">20 €</span></div>
+        </div>
+
+        <div class="tarif-card">
+          <h3><span class="emoji">🧒</span> Coupe Enfant</h3>
+          <div class="tarif-row"><span>Moins de 12 ans</span><span class="prix">12 €</span></div>
+        </div>
+
+        <div class="tarif-card">
+          <h3><span class="emoji">🎨</span> Coloration</h3>
+          <div class="tarif-row"><span>Coloration racines</span><span class="prix">35 €</span></div>
+          <div class="tarif-row"><span>Coloration complète</span><span class="prix">50 €</span></div>
+          <div class="tarif-row"><span>Mèches / Balayage</span><span class="prix">À partir de 45 €</span></div>
+        </div>
+      </div>
+
+      <p class="tarif-note">* Tarifs indicatifs, susceptibles d'évoluer selon la longueur des cheveux et la complexité de la prestation.</p>
+    </div>
+  </section>
+
+  <!-- ZONE DE DEPLACEMENT -->
+  <section class="section zone-section">
+    <div class="container">
+      <h2 class="section-title">Zone de déplacement</h2>
+      <p class="section-subtitle">Où puis-je intervenir ?</p>
+
+      <div class="zone-box">
+        <span class="icon-big">📍</span>
+        <h3>Vannes et alentours</h3>
+        <p>
+          Je me déplace à votre domicile sur Vannes et les communes environnantes.
+          Des frais de déplacement peuvent s'appliquer en fonction de la distance.
+          N'hésitez pas à m'appeler pour connaître les conditions selon votre lieu de résidence.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer>
+    <div class="container footer-contact">
+      <h2>Prenons contact</h2>
+      <div class="footer-phone">📞 06 58 58 72 85</div>
+      <div class="footer-email">✉️ suzanneteixeira56@gmail.com</div>
+      <a href="tel:+33658587285" class="footer-btn">
+        📞 Appeler maintenant
+      </a>
+    </div>
+  </footer>
+
+  <!-- STICKY CALL BUTTON (mobile) -->
+  <div class="sticky-call">
+    <a href="tel:+33658587285">📞 Appeler Suzanne</a>
+  </div>
+
+</body>
+</html>
